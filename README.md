@@ -1,19 +1,11 @@
 # btcwallet
 
-## Project setup
-```
-yarn install
-```
+## Download geniewallet:
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+Windows
 
-### Compiles and minifies for production
-```
-yarn build
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+MacOS
+
+
+Linux
