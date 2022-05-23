@@ -1,4 +1,9 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import {
+  createRouter,
+  createWebHistory,
+  RouteRecordRaw,
+  createWebHashHistory,
+} from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -28,7 +33,10 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  //electron only works with hash
+  history: process.env.IS_ELECTRON
+    ? createWebHashHistory()
+    : createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 }
@@ -36,3 +44,5 @@ const router = createRouter({
 })
 
 export default router
+
+//createWebHistory(process.env.BASE_URL)

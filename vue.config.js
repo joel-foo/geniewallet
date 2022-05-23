@@ -14,4 +14,28 @@ module.exports = defineConfig({
       asyncWebAssembly: true,
     },
   },
+  pluginOptions: {
+    electronBuilder: {
+      builderOptions: {
+        appId: 'com.electron.genie-wallet',
+        productName: 'genie wallet',
+        mac: {
+          category: 'public.app-category.finance',
+          icon: 'build/icon.icns',
+        },
+        win: {
+          target: [
+            {
+              target: 'nsis',
+              arch: ['x64', 'ia32'],
+            },
+          ],
+          icon: 'build/icon.ico',
+        },
+        linux: {
+          target: ['deb', 'AppImage'],
+        },
+      },
+    },
+  },
 })

@@ -7,14 +7,17 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
-  { scheme: 'app', privileges: { secure: true, standard: true } },
+  {
+    scheme: 'app',
+    privileges: { secure: true, standard: true, supportFetchAPI: true },
+  },
 ])
 
 async function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
     width: 800,
-    height: 600,
+    height: 800,
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
