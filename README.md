@@ -1,8 +1,6 @@
 # Genie wallet
 
-''' 
-A secure, beautiful cross-platform desktop Bitcoin wallet.
-'''
+''' A secure, beautiful cross-platform desktop Bitcoin wallet. '''
 
 ## Download geniewallet:
 
