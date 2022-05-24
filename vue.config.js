@@ -30,7 +30,12 @@ module.exports = defineConfig({
               arch: ['x64', 'ia32'],
             },
           ],
-          icon: 'build/icon.ico',
+          icon: 'build/icon.png',
+        },
+        nsis: {
+          allowToChangeInstallationDirectory: true,
+          oneClick: false,
+          perMachine: false,
         },
         linux: {
           target: ['deb', 'AppImage'],
@@ -39,3 +44,8 @@ module.exports = defineConfig({
     },
   },
 })
+
+// {
+//   target: 'nsis',
+//   arch: ['x64', 'ia32'],
+// },
